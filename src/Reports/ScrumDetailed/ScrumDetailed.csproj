@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BugCardRow.cs" />
+    <Compile Include="Converters\AssigneeConverter.cs" />
     <Compile Include="Converters\AutomationConverter.cs" />
     <Compile Include="Converters\BacklogPriorityConverter.cs" />
     <Compile Include="Converters\DateConverter.cs" />

@@ -41,7 +41,7 @@ namespace MSFforAgile
         return false;
       }
       // Only the MSF for Agile process template has this type
-      return wiTypeCollection.Contains("User Story");
+      return wiTypeCollection.Contains("User Story") || wiTypeCollection.Contains("A-question");
     }
 
     public string Description
@@ -76,6 +76,9 @@ namespace MSFforAgile
                 break;
             case "Bug":
                 rows.Add(new BugCardRow(workItem));
+                break;
+            case "Question":
+                rows.Add(new QuestionCardRow(workItem));
                 break;
             default:
                 rows.Add(new UnknownCardRow(workItem));

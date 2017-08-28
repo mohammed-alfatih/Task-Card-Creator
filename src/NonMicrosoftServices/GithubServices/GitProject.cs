@@ -12,9 +12,10 @@ namespace GithubServices
 
         public IEnumerable<string> WorkItemTypeCollection => new List<string>
         {
-            "Story",
+            "User Story",
             "Task",
-            "Bug"
+            "Bug",
+            "A-question"
         };
 
         public List<ReportItem> WorkItems
@@ -26,16 +27,40 @@ namespace GithubServices
                 {
                     var ri = new ReportItem
                     {
-                        Id = issue.Id.ToString(),
-                        Title = issue.Title,
-                        Description = issue.Body
+                        Id = issue.Number.ToString(),
+                        Title = issue.Task
                     };
-                    ri.Fields.Add("Assignee", issue.Assignee);
-                    ri.Fields.Add("CreatedAt", issue.CreatedAt);
-                    ri.Fields.Add("Labels",issue.Labels);
-                    ri.Fields.Add("Milestone",issue.Milestone.Title);
-                    ri.Fields.Add("UpdatedAt",issue.UpdatedAt);
-                    ri.Fields.Add("State",issue.State);
+                    ri.Fields.Add("Assignee", (issue.Assignee == "Not Assigned") ? "" : issue.Assignee);
+                    ri.Fields.Add("Label",issue.Label);
+                    ri.Fields.Add("Milestone",issue.Milestone);
+                    ri.Fields.Add("State",issue.Estimate);
+                    ri.Fields.Add("Number", issue.Number);
+                    //ri.Type = issue.Label == "A-bug" ? "Bug" : "Task";
+                    ri.Fields.Add("Stack Rank", "-");
+                    ri.Fields.Add("IterationPath", issue.Milestone);
+                    ri.Fields.Add("Original Estimate", null);
+                    ri.Fields.Add("Repro Steps", null);
+                    ri.Fields.Add("Story Points", null);
+                    ri.Fields.Add("Backlog Priority", null);
+                    ri.Fields.Add("Remaining Work", null);
+                    ri.Fields.Add("Effort", issue.Estimate);
+                    ri.Fields.Add("Final Effort", issue.Estimate);
+                    ri.Fields.Add("AreaPath", null);
+                    ri.Fields.Add("Feature Type", issue.Label);
+                    switch (issue.Label)
+                    {
+                        case "A-bug":
+                            ri.Type = "Bug";
+                            break;
+                        case "A-feature":
+                            ri.Type = "Task";
+                            break;
+                        case "A-question":
+                            ri.Type = "Question";
+                            break;
+                        default:
+                            break;
+                    }
 
                     l.Add(ri);
                 }

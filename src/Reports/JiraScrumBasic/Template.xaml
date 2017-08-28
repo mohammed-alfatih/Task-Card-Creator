@@ -64,10 +64,10 @@
                     <StackPanel>
                         <TextBlock Margin="10" Text="{Binding Path=WorkItem.Title}" TextWrapping="Wrap" Height="150" FontSize="13pt" TextTrimming="CharacterEllipsis"/>
                         <StackPanel Margin="10,10,10,10" Orientation="Horizontal">
-                            <TextBlock Text="Id=" FontSize="11pt" />
+                            <TextBlock Text="Issue=" FontSize="11pt" />
                             <TextBlock Text="{Binding Path=WorkItem.Id}" FontSize="11pt" />
-                            <TextBlock Text=", Parent=" FontSize="11pt" />
-                            <TextBlock Text="{Binding Path=WorkItem.ParentId}" FontSize="11pt" />
+                            <!--<TextBlock Text=", Parent=" FontSize="11pt" />
+                            <TextBlock Text="{Binding Path=WorkItem.ParentId}" FontSize="11pt" />-->
                         </StackPanel>
                     </StackPanel>
                 </Border>

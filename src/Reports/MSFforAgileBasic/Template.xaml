@@ -66,7 +66,7 @@
         </Grid.RowDefinitions>
         <Border Grid.Row="0" Background="#FFDF7F" Margin="0" Width="300" BorderBrush="#FFC000"  BorderThickness="2,2,2,0" CornerRadius="16,16,0,0">
           <DockPanel  Margin="10" >
-            <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem.Id, StringFormat='Task {0}'}" FontSize="13pt" FontWeight="Bold" />
+            <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="Task " FontSize="13pt" FontWeight="Bold" />
             <StackPanel Orientation="Vertical">
               <DockPanel HorizontalAlignment="Right">
                 <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Right" Text="Rank: " FontSize="8pt"/>
@@ -74,7 +74,7 @@
               </DockPanel>
               <DockPanel HorizontalAlignment="Right">
                 <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Right" Text="Parent: " FontSize="8pt"/>
-                <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Left" Text="{Binding Path=WorkItem.ParentId}" FontSize="8pt" />
+                <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Left" Text="{Binding Path=WorkItem.Id}" FontSize="8pt" />
               </DockPanel>
             </StackPanel>
           </DockPanel>
@@ -108,16 +108,16 @@
         </Grid.RowDefinitions>
         <Border Grid.Row="0" Background="#B9CDE5" Margin="0" Width="300" BorderBrush="#385D8A"  BorderThickness="2,2,2,0" CornerRadius="16,16,0,0">
           <DockPanel  Margin="10" >
-            <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem.Id, StringFormat='User Story {0}'}" FontSize="13pt" FontWeight="Bold" />
+            <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem.Id, StringFormat='User Story #{0}'}" FontSize="13pt" FontWeight="Bold" />
             <StackPanel Orientation="Vertical">
               <DockPanel HorizontalAlignment="Right">
                 <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Right" Text="Rank: " FontSize="8pt"/>
                 <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Left" Text="{Binding Path=WorkItem, Converter={StaticResource stackRankConverter}}" FontSize="8pt" />
               </DockPanel>
-              <DockPanel HorizontalAlignment="Right">
+              <!--<DockPanel HorizontalAlignment="Right">
                 <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Right" Text="Parent: " FontSize="8pt"/>
                 <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Left" Text="{Binding Path=WorkItem.ParentId}" FontSize="8pt" />
-              </DockPanel>
+              </DockPanel>-->
             </StackPanel>
           </DockPanel>
         </Border>
@@ -147,16 +147,16 @@
         </Grid.RowDefinitions>
         <Border Grid.Row="0" Background="#FF7F7F" Margin="0" Width="300" BorderBrush="#C00000"  BorderThickness="2,2,2,0" CornerRadius="16,16,0,0">
           <DockPanel  Margin="10" >
-            <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem.Id, StringFormat='Bug {0}'}" FontSize="13pt" FontWeight="Bold" />
+            <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem.Id, StringFormat='Bug #{0}'}" FontSize="13pt" FontWeight="Bold" />
             <StackPanel Orientation="Vertical">
               <DockPanel HorizontalAlignment="Right">
                 <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Right" Text="Rank: " FontSize="8pt"/>
                 <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Left" Text="{Binding Path=WorkItem, Converter={StaticResource stackRankConverter}}" FontSize="8pt" />
               </DockPanel>
-              <DockPanel HorizontalAlignment="Right">
+              <!--<DockPanel HorizontalAlignment="Right">
                 <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Right" Text="Parent: " FontSize="8pt"/>
                 <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Left" Text="{Binding Path=WorkItem.ParentId}" FontSize="8pt" />
-              </DockPanel>
+              </DockPanel>-->
             </StackPanel>
           </DockPanel>
         </Border>

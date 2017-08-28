@@ -84,7 +84,7 @@
           <DropShadowEffect />
         </TabControl.Effect>
         <TabItem Name="IntroTab" Header="Introduction">
-                    <WebBrowser Source="https://github.com/frederiksen/Task-Card-Creator"></WebBrowser>          
+                    <WebBrowser Source="https://github.com"></WebBrowser>          
         </TabItem>
 
       </TabControl>

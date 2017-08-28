@@ -36,7 +36,13 @@
               <File Source="$(var.JIRAServices.TargetDir)\Atlassian.Jira.dll" />
               <File Source="$(var.JIRAServices.TargetDir)\RestSharp.dll" />
             </Component>
-          </Directory>          
+          </Directory>
+          <Directory Id="GitService" Name="GitService">
+            <Component Id="GitService.dll" Guid="DBF1D53E-A7DB-44D2-A5DA-A9ABC8DCC725">
+              <File Source="$(var.GithubServices.TargetPath)" />
+              <File Source="$(var.GithubServices.TargetDir)\Octokit.dll" />
+            </Component>
+          </Directory>
           <Directory Id="Generic" Name="Generic">
             <Component Id="Generic.dll" Guid="512D7133-4F10-4657-ACB5-FE3187DDA672">
               <File Source="$(var.Generic.TargetPath)" />
@@ -203,8 +209,8 @@
     <DirectoryRef Id="ApplicationProgramsFolder">
       <Component Id="ApplicationShortcut" Guid="*">
         <Shortcut Id="ApplicationStartMenuShortcut"
-                  Name="Task Card Creator 8.0"
-                  Description="Task Card Creator 8.0"
+                  Name="Task Card Creator 9.0"
+                  Description="Task Card Creator 9.0"
                   Target="[INSTALLLOCATION]TaskCardCreator.exe"
                   WorkingDirectory="INSTALLLOCATION"/>
         <Shortcut Id="LicenseStartMenuShortcut"
@@ -220,6 +226,7 @@
     <Feature Id="ProductFeature" Title="Task Card Creator" Description="Task Card Creator" Level="1" Absent="disallow" AllowAdvertise="no">
 			<ComponentRef Id="TaskCardCreator.exe" />
       <ComponentRef Id="JiraService.dll" />
+      <ComponentRef Id="GitService.dll"/>
       <ComponentRef Id="Generic.dll" />
       <ComponentRef Id="MSFforAgile.dll" />
       <ComponentRef Id="MSFforAgileBasic.dll" />

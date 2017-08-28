@@ -12,7 +12,7 @@ namespace GithubServices.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.1.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.3.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -25,7 +25,7 @@ namespace GithubServices.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://api.github.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://devtopia.esri.com/ArcGISPro")]
         public string GitService_Url {
             get {
                 return ((string)(this["GitService_Url"]));
@@ -49,25 +49,25 @@ namespace GithubServices.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("project = DEMO")]
-        public string GitService_Jql {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string GitService_Token {
             get {
-                return ((string)(this["GitService_Jql"]));
+                return ((string)(this["GitService_Token"]));
             }
             set {
-                this["GitService_Jql"] = value;
+                this["GitService_Token"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("50")]
-        public int GitService_Paging_ItemsPerPage {
+        [global::System.Configuration.DefaultSettingValueAttribute("ps-data-reviewer")]
+        public string GitService_Repo {
             get {
-                return ((int)(this["GitService_Paging_ItemsPerPage"]));
+                return ((string)(this["GitService_Repo"]));
             }
             set {
-                this["GitService_Paging_ItemsPerPage"] = value;
+                this["GitService_Repo"] = value;
             }
         }
     }

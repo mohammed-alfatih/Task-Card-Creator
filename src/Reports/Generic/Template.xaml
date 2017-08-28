@@ -64,7 +64,7 @@
           <StackPanel>
             <TextBlock Margin="10" Text="{Binding Path=ReportItem.Title}" TextWrapping="Wrap" Height="150" FontSize="13pt" TextTrimming="CharacterEllipsis"/>
             <StackPanel Margin="10,10,10,10" Orientation="Horizontal">
-              <TextBlock Text="Id=" FontSize="11pt" />
+              <TextBlock Text="Issue=" FontSize="11pt" />
               <TextBlock Text="{Binding Path=ReportItem.Id}" FontSize="11pt" />
             </StackPanel>
           </StackPanel>

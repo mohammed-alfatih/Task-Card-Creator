@@ -28,6 +28,14 @@
     <Compile Include="Product.wxs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\NonMicrosoftServices\GithubServices\GithubServices.csproj">
+      <Name>GithubServices</Name>
+      <Project>{af01152a-a70e-4df2-a39c-75743f67fefd}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
     <ProjectReference Include="..\..\NonMicrosoftServices\JIRAServices\JIRAServices.csproj">
       <Name>JIRAServices</Name>
       <Project>{25df92d4-f0b1-40b8-af5e-44cf9e0ca953}</Project>
