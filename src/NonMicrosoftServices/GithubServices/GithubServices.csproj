@@ -37,9 +37,6 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="ReportInterface">
-      <HintPath>..\..\..\..\..\Task-Card-Creator\src\TeamFoundationServerServices\TFSQueryServices\bin\Debug\ReportInterface.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
@@ -51,9 +48,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="TaskServerServiceInterface">
-      <HintPath>..\..\..\..\..\Task-Card-Creator\src\TeamFoundationServerServices\TFSQueryServices\bin\Debug\TaskServerServiceInterface.dll</HintPath>
-    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +77,20 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ReportingFramework\ReportingFramework.csproj">
+      <Project>{f963c71e-2a1f-4c0a-8c21-f27b87a726ea}</Project>
+      <Name>ReportingFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ReportInterface\ReportInterface.csproj">
+      <Project>{6ccc49f4-424d-4864-9e61-04d2ad8fc3f6}</Project>
+      <Name>ReportInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TaskServerServiceInterface\TaskServerServiceInterface.csproj">
+      <Project>{8f858d2a-8036-405a-9657-e2dc0f8ee198}</Project>
+      <Name>TaskServerServiceInterface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
